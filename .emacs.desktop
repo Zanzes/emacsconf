@@ -1,0 +1,91 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Mon Apr  8 05:45:10 2019
+;; Desktop file format version 208
+;; Emacs version 25.2.2
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (23722 50118 140024 603000) (desktop . "208") "zanzes@MainMasterBossKing" nil nil ((((font-backend xft x) (font . "-PfEd-DejaVu Sans Mono-normal-normal-normal-*-15-*-*-*-m-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "WhiteSmoke") (background-color . "black") (mouse-color . "OrangeRed") (border-color . "gold") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (scroll-bar-foreground . "WhiteSmoke") (scroll-bar-background . "grey75") (menu-bar-lines . 1) (tool-bar-lines . 1) (title) (wait-for-wm . t) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 0) (alpha) (fullscreen . maximized) (display-type . color) (background-mode . dark) (cursor-color . "orchid") (sticky) (environment) (frameset--id . "7684-72B2-48C3-63B1") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (display . ":1") (explicit-name) (visibility . t) (height . 52) (width . 209) (left . 3279) (top . 1626)) ((min-height . 4) (min-width . 20) (min-height-ignore . 3) (min-width-ignore . 12) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 72) (min-pixel-width . 180) (min-pixel-height-ignore . 54) (min-pixel-width-ignore . 108) (min-pixel-height-safe . 18) (min-pixel-width-safe . 36)) hc (pixel-width . 1920) (pixel-height . 929) (total-width . 213) (total-height . 51) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 957) (pixel-height . 929) (total-width . 106) (total-height . 51) (normal-height . 1.0) (normal-width . 0.5) (buffer "init.el" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 2 t nil 0 t) (vscroll . 0) (dedicated) (point . 301) (start . 1))) (leaf (last . t) (pixel-width . 963) (pixel-height . 929) (total-width . 107) (total-height . 51) (normal-height . 1.0) (normal-width . 0.5) (buffer "*Apropos*" (selected) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 2 t nil 0 t) (vscroll . 0) (dedicated) (point . 55) (start . 1)))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("paredit" "divider" "para" "smartpar" "paren"))
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("/home/zanzes/dev/lisping" "~/dev/../.emacs.d/init.el" "~/dev/lisping/lisping.lisp" "~/.config/common-lisp/source-registry.conf.d/projects.conf" "~/dev/lisping/.." "~/dev/lisping/lisping.lisp" "~/dev/lisping/lisping.asd" "~/dev/lisping/lisping.lisp" "~/dev/lisping/package.lisp" "~/dev/lisping/" "~/dev/" "~/dev" "~/.emacs.d/init.el" "~/dev/lisping/test.lisp" "~/dev/lisping/lisping.lisp" "~/dev/lisping/lisping.asd" "~/dev/lisping/test.lisp" "/home/zanzes/dev" "/home/zanzes/dev/lisp-proj" "~/dev/lisp-proj/lisp-proj.lisp" "~/dev/lisp-proj/package.lisp" "/home/zanzes/dev/lisp-proj/lisp-proj.lisp" "~/dev/lisp/lisp-proj/../../lisp-proj/lisp-proj.lisp" "~/dev/lisp/lisp-proj/lisp-proj.lisp" "~/dev/lisp/lisp-proj/lisp-proj.asd" "~/dev/lisp/lisp-proj/test.lisp" "~/dev/lisp/test.lisp" "~/.emacs.d/init.el" "~/dev/lisp/test.lisp"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/home/zanzes/.emacs.d/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(which-key-mode)
+  301
+  '(1223 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode))
+  '((mark-ring (1217 536 1385 1385 1160 1160 1382 1160 1158 1125 826 536 1551 56 783 1575))))
+
+(desktop-create-buffer 208
+  nil
+  "dev"
+  'dired-mode
+  '(which-key-mode)
+  2188
+  '(2188 nil)
+  t
+  '("/home/zanzes/dev/")
+  nil
+  '((mark-ring (2188))))
+
+(desktop-create-buffer 208
+  "/home/zanzes/dev/lisping/lisping.lisp"
+  "lisping.lisp"
+  'lisp-mode
+  '(eldoc-mode slime-mode slime-autodoc-mode which-key-mode paredit-mode)
+  629
+  '(345 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix))
+  '((mark-ring (345 345 43 43 43 43 43 629 627 200 629 43 100 135 205 629))))
+
+(desktop-create-buffer 208
+  "/home/zanzes/.config/common-lisp/source-registry.conf.d/projects.conf"
+  "projects.conf"
+  'conf-unix-mode
+  '(which-key-mode)
+  23
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (1 23))))
+
+(desktop-create-buffer 208
+  "/home/zanzes/dev/lisping/lisping.asd"
+  "lisping.asd"
+  'lisp-mode
+  '(eldoc-mode slime-mode slime-autodoc-mode which-key-mode)
+  238
+  '(238 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix))
+  '((mark-ring (137 103 101 238 240 238 240 240 240 240))))
+
+(desktop-create-buffer 208
+  "/home/zanzes/dev/lisping/package.lisp"
+  "package.lisp"
+  'lisp-mode
+  '(eldoc-mode slime-mode slime-autodoc-mode which-key-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+

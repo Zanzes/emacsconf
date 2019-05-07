@@ -1,0 +1,28 @@
+
+;; ----- smex-history -----
+(
+ org-capture
+ customize-option
+ customize
+ ansi-term
+ customize-themes
+ list-packages
+ other-frame
+)
+
+;; ----- smex-data -----
+(
+ (backward-kill-word . 1)
+ (kill-word . 1)
+ (customize . 20)
+ (list-packages . 11)
+ (ansi-term . 8)
+ (package-delete . 1)
+ (customize-themes . 14)
+ (org-format-headings . 1)
+ (describe-variable . 1)
+ (handle-switch-frame . 1)
+ (other-frame . 11)
+ (customize-option . 2)
+ (org-capture . 1)
+)

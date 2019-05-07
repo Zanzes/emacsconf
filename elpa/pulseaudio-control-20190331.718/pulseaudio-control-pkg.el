@@ -1,0 +1,2 @@
+;;; -*- no-byte-compile: t -*-
+(define-package "pulseaudio-control" "20190331.718" "Use `pactl' to manage PulseAudio volumes." 'nil :commit "638a02b0b59cd9662abbbb9dc947d0fed115b72d" :keywords '("multimedia" "hardware" "sound" "pulseaudio") :authors '(("Alexis" . "flexibeast@gmail.com") ("Ellington Santos" . "ellingtonsantos@gmail.com") ("Sergey Trofimov" . "sarg@sarg.org.ru")) :maintainer '("Alexis" . "flexibeast@gmail.com") :url "https://github.com/flexibeast/pulseaudio-control")
