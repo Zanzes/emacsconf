@@ -10,25 +10,26 @@
 ** Emacs window manager
 *** On Install
 #+BEGIN_SRC emacs-lisp
-  (use-package exwm
-    :ensure t
-    :config
-    (require 'exwm-config)
-    (exwm-config-default)
-    (exwm-config-ido))
+  ;;(use-package exwm
+  ;;  :ensure t
+  ;;  :config
+  ;;  (require 'exwm-config)
+  ;;  (exwm-config-default)
+  ;;  (exwm-config-ido))
+  ;;
 #+END_SRC
 *** On Set workspaces to 3
     :LOGBOOK:
     - State "On"         from              [2019-05-01 Wed 23:42]
     :END:
 #+BEGIN_SRC emacs-lisp
-  (setq exwm-workspace-number 3)
+  ;;(setq exwm-workspace-number 3)
 #+END_SRC
 *** On Desktop layout
 #+BEGIN_SRC emacs-lisp
-  (require 'exwm-randr)
-  (setq exwm-randr-workspace-output-plist '(1 "DVI-D-0" 0 "DP-1" 2 "DVI-I-1"))
-  (exwm-randr-enable)
+  ;;(require 'exwm-randr)
+  ;;(setq exwm-randr-workspace-output-plist '(1 "DVI-D-0" 0 "DP-1" 2 "DVI-I-1"))
+  ;;(exwm-randr-enable)
 #+END_SRC
 *** Hotkeys
 **** Off Open dmenu (win-d)
@@ -41,10 +42,10 @@
 #+END_SRC
 *** On Dmenu
 #+BEGIN_SRC emacs-lisp
-  (use-package dmenu
-    :ensure t
-    :bind
-    ("s-SPC" . 'dmenu))
+ ;; (use-package dmenu
+   ;; :ensure t
+   ;; :bind
+    ;;("s-SPC" . 'dmenu))
 #+END_SRC
 *** On Hide menus and scroll-bars
 #+BEGIN_SRC emacs-lisp
@@ -69,7 +70,7 @@
     - State "On"         from              [2019-05-01 Wed 23:43]
     :END:
 #+BEGIN_SRC emacs-lisp
-  (exwm-enable)
+;  (exwm-enable)
 #+END_SRC
 
 

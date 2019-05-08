@@ -52,13 +52,10 @@
  '(org-refile-targets (quote ((org-agenda-files :level . 1))))
  '(org-src-tab-acts-natively t)
  '(org-src-window-setup (quote current-window))
- '(org-todo-keywords
-   (quote
-    ((sequence "TODO(t!/!)" "IMPORTANT(i!/!)" "ACTIVE(a!/!)" "|" "DONE(d!/!)"))))
  '(org-track-ordered-property-with-tag t)
  '(package-selected-packages
    (quote
-    (org-alert elpy material-theme better-defaults format-all org htmlize which-key volume use-package try threes switch-window swiper sudo-ext sudo-edit spacemacs-theme spaceline-all-the-icons smex smartparens slime rainbow-mode rainbow-delimiters python pulseaudio-control pretty-mode popup-kill-ring paren-completer paredit-menu org-bullets mark-multiple jedi ido-vertical-mode hungry-delete highlight-parentheses golden-ratio gited exwm expand-region dmenu dashboard csv-mode company-statistics company-math company-ebdb beacon ace-window)))
+    (org-alert elpy material-theme better-defaults format-all org htmlize which-key volume use-package try threes switch-window swiper sudo-ext sudo-edit spacemacs-theme spaceline-all-the-icons smex smartparens slime rainbow-mode rainbow-delimiters python pulseaudio-control pretty-mode popup-kill-ring paren-completer paredit-menu org-bullets mark-multiple jedi ido-vertical-mode hungry-delete highlight-parentheses golden-ratio gited expand-region dmenu dashboard csv-mode company-statistics company-math company-ebdb beacon ace-window)))
  '(powerline-default-separator (quote alternate)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

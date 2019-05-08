@@ -1,18 +1,19 @@
 (use-package better-defaults
   :ensure t)
 
-(use-package exwm
-  :ensure t
-  :config
-  (require 'exwm-config)
-  (exwm-config-default)
-  (exwm-config-ido))
+;;(use-package exwm
+;;  :ensure t
+;;  :config
+;;  (require 'exwm-config)
+;;  (exwm-config-default)
+;;  (exwm-config-ido))
+;;
 
-(setq exwm-workspace-number 3)
+;;(setq exwm-workspace-number 3)
 
-(require 'exwm-randr)
-(setq exwm-randr-workspace-output-plist '(1 "DVI-D-0" 0 "DP-1" 2 "DVI-I-1"))
-(exwm-randr-enable)
+;;(require 'exwm-randr)
+;;(setq exwm-randr-workspace-output-plist '(1 "DVI-D-0" 0 "DP-1" 2 "DVI-I-1"))
+;;(exwm-randr-enable)
 
 ;;  (setq exwm-input-global-keys
 ;;	`(
@@ -20,10 +21,10 @@
 ;;		       (interactive (list (read-shell-command "$ ")))
 ;;		       (start-process-shell-command command nil command)))))
 
-(use-package dmenu
-  :ensure t
-  :bind
-  ("s-SPC" . 'dmenu))
+;; (use-package dmenu
+  ;; :ensure t
+  ;; :bind
+   ;;("s-SPC" . 'dmenu))
 
 (fringe-mode 1)
 (tool-bar-mode -1)
@@ -34,7 +35,7 @@
 
 (server-start)
 
-(exwm-enable)
+;  (exwm-enable)
 
 (use-package volume
   :ensure t)

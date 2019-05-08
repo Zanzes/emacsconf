@@ -2,15 +2,22 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/zanzes/dev/skm/" . "key_maps/")
+ ("/home/" . "zanzes/")
  ("/home/zanzes/dev/evdevremapkeys/" . "evdevremapkeys/")
  ("/home/zanzes/dev/org/" . "config/")
- ("/home/zanzes/dev/" . "org/")
+ ("/home/zanzes/dev/" . "skm/")
  ("/" . "etc/")
- ("/home/zanzes/" . ".emacs.d/")
+ ("/home/zanzes/" . "dev/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/zanzes/dev/skm/"
+ "/home/zanzes/dev/skm/key_maps/"
+ "/home/zanzes/dev/bash/"
+ "/home/zanzes/dev/bash/test.sh/"
+ "/home/zanzes/org/"
  "/home/zanzes/.emacs.d/"
  "/home/zanzes/dev/org/"
  "/home/zanzes/"
@@ -24,31 +31,39 @@
 
 ;; ----- ido-work-file-list -----
 (
- "init.el"
+ "key_converter.py"
+ "emacs_org.py"
+ "test.sh"
+ "ensure-root.sh"
+ "gather-setup-files.sh"
+ "main.org"
+ "lists.org"
+ "notes.org"
  "emacs-keys.org"
- "key-mapper.py"
- ".profile"
  "lzconf.org"
- "lzconf.el"
- "evdevremapkeys.py"
- "keys3"
- "keys.org"
- "keys2.org"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/zanzes/.emacs.d/" (23759 9389 505973 158000) "smex-items" "session.10d4084a938b807c4e155568979019696100000199940077" "lzconf.org~" "auto-save-list/" "ede-projects.el" "init.el" "dmenu-items" "session.102f85d429f536f72b155431671433150800000035950074" "ido.last~" "eshell/" "install.sh" "../" "recentf" "session.10481d16bd54f20e9215543897084939600000034250074" "ido.last" "session.10fe6fbba28c32d454155549673291653200000061260074" ".emacs.desktop" "lzconf.org" "network-security.data" "session.10ab7f8a528d4a2871155361846481483400000031820074" "init.el~" "./" "lzconf.el" "%backup%~" ".git/" "backups/" "url/" "elpa/")
+ ("/home/zanzes/dev/skm/key_maps/" (23758 63125 522400 418000) "__pycache__/" "../" "./" "emacs_org.py")
 
- ("/home/zanzes/" (23759 1352 955021 762000) "Arduino/" "keys" ".config/" ".kinorc" ".PyCharm2016.2/" "org/" "Public/" ".stack/" ".jupyter/" "THIS" "Desktop/" ".designer/" "init.el" "RUU_M8_UL_M60_SENSE70_MR_BrightstarUS_WWE_6.12.1540.4.exe" "ttmp_emacs.el" ".processing/" ".vimrc.swp" ".arduino15/" ".bashrc" ".android/" ".dbus/" "rotate_screen" "root.db" ".bash_logout" ".slime/" "a" "factorio" "globaldata/" "Oracle_VM_VirtualBox_Extension_Pack-6.0.0.vbox-extpack" ".sbclrc" ".gphoto/" ".esd_auth" "quick/" "pulseaudio_user.mod" "vloopback-1.1-rc1/" ".docker/" "Documents/" "sketchbook/" "192.168.87.122:xxx" "Unity/" ".steam/" "vloopback-1.1-rc1.tar.gz" ".xbindkeysrc" "apt_back/" ".recently-used" "VirtualBox VMs/" "tmp.py" "../" "sucsRescue" ".bl2/" ".Xilinx/" ".gnome/" ".pulse-cookie" "b" ".PyCharmCE2019.1/" ".steampid" "emacs.d/" ".highload.cfg" ".xinstall/" ".slime-history.eld" "SP_Flash_Tool_v5.1824_Linux.zip" ".vscode-insiders/" ".mplayer/" ".nv/" "trusted-keys" "xxx" "pulseaudio_user.tp" "vloopback-1.1-rc1.tar.gz.1" ".bashrc~" ".ssh/" ".mozilla/" ".wget-hsts" ".bashrc-anaconda3.bak" "vimrc" "test.py" ".vimrc~" ".conda/" "java_error_in_PYCHARM_3466.log" ".gconf/" ".dotnet/" "Music/" ".monit.pid" ".vimrc" "Factorio.desktop" ".pam_environment" ".monit.state" ".steampath" "config.yaml" ".java/" "log" ".ghc/" "Steam/" ".emacs.d/" ".psensor/" "ttmp_emacs.el~" ".IdeaIC2018.3/" "obj/" "Pictures/" ".tooling/" ".vim/" "#tmp#" "snap/" ".oracle_jre_usage/" ".viminfo" ".local/" ".sudo_as_admin_successful" "scratches/" ".ICEauthority" "scratch.lisp" "xmodmap-pp" ".saves/" ".macromedia/" ".cache/" ".pythonhist" "Templates/" ".Xauthority" "mvq" ".xprofile" ".kodi/" "xserver/" "Downloads/" "data.pkl" ".PyCharmCE2018.3/" "save/" "pulseaudio_user.pp" "sptool/" "./" "xorg-macros/" ".subversion/" "dev/" ".profile" ".PyCharm2018.3/" ".python_history" ".pki/" "conf.xr" "quicklisp/" "android_backup/" "Videos/" ".gvfs/" "gnome_terminal_settings_backup.txt" ".tmux.conf" "scratch.lisp~" "RecoveryMap.log" ".kino-history/" ".gnupg/" ".vnc/" "bashrc" "idea" "Qt/" "gphx.py" ".monit.id" ".adobe/" ".cabal/" "test.sh" "Fiddler2/" "zanzes@192.168.87.122:xxx" ".mono/" ".gitconfig" "wxWidgets/" "test.lisp" ".selected_editor" ".arduino/" "saves/" "tmp" ".virtualenvs/" "x/" ".xinitrc" ".bash_history" ".ipython/")
+ ("/home/zanzes/dev/skm/" (23758 62357 250671 954000) "key_mapper.py" "__pycache__/" "../" "key_converter.py" "key-mapper-side.py" "./" "key_maps/")
+
+ ("/home/zanzes/" (23761 14044 600555 404000) "Arduino/" "keys" ".config/" ".kinorc" ".PyCharm2016.2/" "org/" "Public/" ".stack/" ".jupyter/" "THIS" "Desktop/" ".designer/" "init.el" "RUU_M8_UL_M60_SENSE70_MR_BrightstarUS_WWE_6.12.1540.4.exe" "ttmp_emacs.el" ".processing/" ".vimrc.swp" ".arduino15/" ".bashrc" ".android/" ".dbus/" "rotate_screen" "root.db" ".bash_logout" ".slime/" "a" "factorio" "globaldata/" "Oracle_VM_VirtualBox_Extension_Pack-6.0.0.vbox-extpack" ".sbclrc" ".gphoto/" ".esd_auth" "quick/" "pulseaudio_user.mod" "vloopback-1.1-rc1/" ".docker/" "Documents/" "sketchbook/" "192.168.87.122:xxx" "Unity/" ".steam/" "vloopback-1.1-rc1.tar.gz" ".xbindkeysrc" "apt_back/" ".recently-used" "VirtualBox VMs/" "tmp.py" "../" "sucsRescue" ".bl2/" ".Xilinx/" ".gnome/" ".pulse-cookie" "b" ".PyCharmCE2019.1/" ".steampid" "emacs.d/" ".highload.cfg" ".xinstall/" ".slime-history.eld" "SP_Flash_Tool_v5.1824_Linux.zip" ".vscode-insiders/" ".mplayer/" ".nv/" "trusted-keys" "xxx" "pulseaudio_user.tp" "vloopback-1.1-rc1.tar.gz.1" ".bashrc~" ".ssh/" ".mozilla/" ".wget-hsts" ".bashrc-anaconda3.bak" "vimrc" "test.py" ".vimrc~" ".conda/" "java_error_in_PYCHARM_3466.log" ".gconf/" ".dotnet/" "Music/" ".monit.pid" ".vimrc" "Factorio.desktop" ".pam_environment" ".monit.state" ".steampath" "config.yaml" ".java/" "log" ".ghc/" "Steam/" ".emacs.d/" ".psensor/" "ttmp_emacs.el~" ".IdeaIC2018.3/" "obj/" "Pictures/" ".tooling/" ".vim/" "#tmp#" "snap/" ".oracle_jre_usage/" ".viminfo" ".local/" ".sudo_as_admin_successful" "scratches/" ".ICEauthority" "scratch.lisp" "xmodmap-pp" ".saves/" ".macromedia/" ".cache/" ".pythonhist" "Templates/" ".Xauthority" "mvq" ".xprofile" ".kodi/" "xserver/" "Downloads/" "data.pkl" ".PyCharmCE2018.3/" "save/" "pulseaudio_user.pp" "sptool/" "./" "xorg-macros/" ".subversion/" "dev/" ".profile" ".PyCharm2018.3/" ".python_history" ".pki/" "conf.xr" "quicklisp/" "android_backup/" "Videos/" ".gvfs/" "gnome_terminal_settings_backup.txt" ".tmux.conf" "scratch.lisp~" "RecoveryMap.log" ".kino-history/" ".gnupg/" ".vnc/" "bashrc" "idea" "Qt/" "gphx.py" ".monit.id" ".adobe/" ".cabal/" "test.sh" "Fiddler2/" "zanzes@192.168.87.122:xxx" ".mono/" ".gitconfig" "wxWidgets/" "test.lisp" ".selected_editor" ".arduino/" "saves/" "tmp" ".virtualenvs/" "x/" ".xinitrc" ".bash_history" ".ipython/")
+
+ ("/home/zanzes/dev/bash/" (23761 11545 461919 546000) "ring_bell.sh" "../" "gather-setup-files.sh" "./" "ensure-root.sh")
+
+ ("/home/zanzes/.emacs.d/" (23761 753 418827 983000) "smex-items" "session.10d4084a938b807c4e155568979019696100000199940077" "lzconf.org~" "auto-save-list/" "ede-projects.el" "init.el" "dmenu-items" "session.102f85d429f536f72b155431671433150800000035950074" "ido.last~" "eshell/" "install.sh" "../" "recentf" "bookmarks" "session.10481d16bd54f20e9215543897084939600000034250074" "ido.last" "session.10fe6fbba28c32d454155549673291653200000061260074" ".emacs.desktop" "lzconf.org" "network-security.data" "session.10ab7f8a528d4a2871155361846481483400000031820074" "init.el~" "./" "lzconf.el" "%backup%~" ".git/" "backups/" "url/" "elpa/")
+
+ ("/home/zanzes/dev/" (23759 14295 234022 316000) "mir/" "mir_zenrobot/" "lzutils/" "resources/" "mir_testing/" "emacsconf/" "sourcesCleaner" "PyScratch/" "arduino/" "projcets.lst" "ui_tests/" "scratch/" "game/" "../" "ips" "test-tools/" ".dockerignore" "lzresources/" "bash/" "skm/" "HaskellTest/" "Resources/" "package-template/" "mir_core/" "./" "lztools/" "lisping/" "mir_vacuousrobot/" "packing/")
+
+ ("/home/zanzes/org/" (23761 8101 879813 843000) "lists.org" "../" "sys/" "main.org" "config/" "todo.org" "./" "archive/" "emacs-keys.org" ".git/" "notes.org")
 
  ("/home/zanzes/dev/emacsconf/" (23753 56380 830135 764000) "init.el" "install.sh" "../" "lzconf.org" "./" ".git/")
 
  ("/home/zanzes/dev/evdevremapkeys/evdevremapkeys/" (23754 59774 226845 113000) "__pycache__/" "../" "__init__.py" "evdevremapkeys.py" "./")
 
  ("/home/zanzes/dev/evdevremapkeys/" (23754 62050 676859 590000) "setup.cfg" "keys.org" "tests/" "evdevremapkeys/" "../" "keys2.org" "build/" "keys3" "setup.py" "MANIFEST.in" "LICENSE" "dist/" "README.md" ".gitignore" "./" "evdevremapkeys.egg-info/" ".git/" "examples/")
-
- ("/home/zanzes/dev/" (23754 49135 985804 327000) "mir/" "org/" "mir_zenrobot/" "lzutils/" "testing/" "server/" "evdevremapkeys/" "ZenRobot/" "resources/" "mir_testing/" "emacsconf/" "sourcesCleaner" "PyScratch/" "arduino/" "projcets.lst" "ui_tests/" "scratch/" "startBog/" "game/" "tmp.py" "../" "test-tools/" ".fluid.java.swp" ".dockerignore" "lzresources/" "bash/" "HaskellTest/" "tttmp/" "Resources/" "pyqt5/" "testpkg/" "pkt/" "package-template/" "veles/" "mir_core/" "build-ZenRobot-Desktop-Debug/" "./" "lztools/" "lisping/" "mir_vacuousrobot/" ".fluid.java.swo" "packing/" "tmp/")
 
  ("/home/zanzes/dev/org/config/" (23754 12396 240421 256000) "init.el" "install.sh" "../" "backup-emacs-config.sh" "emacs.desktop" "lzconf.org" "?xinitrc" "./")
 

@@ -1,0 +1,84 @@
+#!~/.virtualenvs/lztools/bin/python3.7
+from collections import namedtuple
+import key_converter
+import pyautogui
+
+Mode = namedtuple("Mode", ["id", "name"])
+
+NoMode = Mode(0, "NoMode")
+
+LeftCtrlMode = Mode(1, "Left Ctrl Mode")
+RightCtrlMode = Mode(2, "Right Ctrl Mode")
+
+LeftAltMode = Mode(6, "Left Alt Mode")
+RightAltMode = Mode(3, "Rigth Alt Mode")
+
+LeftShiftMode = Mode(4, "Left Shift Mode")
+RightShiftMode = Mode(5, "Right Shift Mode")
+
+mode = NoMode
+
+def toggle_left_ctrl():
+    global mode
+    if mode == LeftCtrlMode:
+        mode = NoMode
+    else:
+        mode = LeftCtrlMode
+    print(f"Mode: {mode.name}")
+
+def toggle_right_ctrl():
+    global mode
+    if mode == RightCtrlMode:
+        mode = NoMode
+    else:
+        mode = RightCtrlMode
+    print(f"Mode: {mode.name}")
+
+def toggle_left_shift():
+    global mode
+    if mode == LeftShiftMode:
+        mode = NoMode
+    else:
+        mode = LeftShiftMode
+    print(f"Mode: {mode.name}")
+
+def toggle_right_shift():
+    global mode
+    if mode == RightShiftMode:
+        mode = NoMode
+    else:
+        mode = RightShiftMode
+    print(f"Mode: {mode.name}")
+
+def toggle_left_alt():
+    global mode
+    if mode == LeftAltMode:
+        mode = NoMode
+    else:
+        mode = LeftAltMode
+    print(f"Mode: {mode.name}")
+
+def toggle_right_alt():
+    global mode
+    if mode == RightAltMode:
+        mode = NoMode
+    else:
+        mode = RightAltMode
+    print(f"Mode: {mode.name}")
+
+def press(emacs_key_str):
+    pyautogui.hotkey(*key_converter.emacs_to_py(emacs_key_str))
+
+def schedule():
+    press("C-c")
+    press("C-s")
+
+hotkeys = {
+    ('S',): schedule,
+    ('LEFTCTRL',): toggle_left_ctrl,
+    ('RIGHTCTRL',): toggle_right_ctrl,
+    ('LEFTSHIFT',): toggle_left_shift,
+    ('RIGHTSHIFT',): toggle_right_shift,
+    ('LEFTALT',): toggle_left_alt,
+    ('RIGHTALT',): toggle_right_alt, 
+}

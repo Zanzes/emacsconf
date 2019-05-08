@@ -1,0 +1,48 @@
+
+
+emacs_to_py_replacements = {
+    "S": "shiftleft",
+    "M": "altleft",
+    "C": "ctrlleft",
+    "W": "winleft"
+}
+
+evd_to_py_replacements = {
+    'LEFTSHIFT': "shiftleft",
+    'LEFTCTRL': 'ctrlleft',
+    'LEFTMETA': 'winleft',
+    'LEFTALT': 'altleft',
+    'RIGHTALT': 'altright',
+    'RIGHTMETA': 'winright',
+    'RIGHTCTRL': 'ctrlright',
+    'RIGHTSHIFT': 'shiftright',
+    'PAGEDOWN': '',
+    'COMMA': ',',
+    'DOT': '.',
+    'SLASH': '/',
+    'APOSTROPHE': "'",
+    'SEMICOLON': ';',
+    'BACKSLASH': '\\',
+    'RIGHTBRACE': ']',
+    'LEFTBRACE': '[',
+    'EQUAL': '='
+}
+
+
+def emacs_to_py(hotkey_str):
+    keys = []
+    for c in hotkey_str:
+        if c in emacs_to_py_replacements:
+            keys.append(emacs_to_py_replacements[c])
+        elif c.isalpha():
+            keys.append(c)
+    return keys
+
+def evd_to_py(hotkey_str, delimiter="-"):
+    keys = []
+    for c in hotkey_str.split(delimiter):
+        if c in evd_to_py_replacements:
+            keys.append(evd_to_py_replacements[c])
+        elif c.isalpha():
+            keys.append(c)
+    return keys
