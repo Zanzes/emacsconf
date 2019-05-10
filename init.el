@@ -5,11 +5,11 @@
 (setq package-enable-at-startup nil)
 
 					; Set package sources
-(setq package-archives '(("marmalade" . "http://marmalade-repo.org/packages/")
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                         ;;("marmalade" . "http://marmalade-repo.org/packages/")
 			 ("ELPA"  . "http://tromey.com/elpa/")
 			 ("gnu"   . "http://elpa.gnu.org/packages/")
-			 ("melpa" . "https://melpa.org/packages/")
-			 ("org" . "https://orgmode.org/elpa/")))
+                         ("org" . "https://orgmode.org/elpa/")))
 
 					; Initialize package
 (package-initialize)
@@ -55,7 +55,7 @@
  '(org-track-ordered-property-with-tag t)
  '(package-selected-packages
    (quote
-    (org-alert elpy material-theme better-defaults format-all org htmlize which-key volume use-package try threes switch-window swiper sudo-ext sudo-edit spacemacs-theme spaceline-all-the-icons smex smartparens slime rainbow-mode rainbow-delimiters python pulseaudio-control pretty-mode popup-kill-ring paren-completer paredit-menu org-bullets mark-multiple jedi ido-vertical-mode hungry-delete highlight-parentheses golden-ratio gited expand-region dmenu dashboard csv-mode company-statistics company-math company-ebdb beacon ace-window)))
+    (dumb-jump git-gutter magit projectile org-alert elpy material-theme better-defaults format-all org htmlize which-key volume use-package try threes switch-window swiper sudo-ext sudo-edit spacemacs-theme spaceline-all-the-icons smex smartparens slime rainbow-mode rainbow-delimiters python pulseaudio-control pretty-mode popup-kill-ring paren-completer paredit-menu org-bullets mark-multiple jedi ido-vertical-mode hungry-delete highlight-parentheses golden-ratio gited expand-region dmenu dashboard csv-mode company-statistics company-math company-ebdb beacon ace-window)))
  '(powerline-default-separator (quote alternate)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

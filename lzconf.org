@@ -74,6 +74,16 @@
 #+END_SRC
 
 
+* Archiving
+** On Allow creating parent nodes
+:LOGBOOK:
+- State "On"         from              [2019-05-09 Thu 17:32]
+:END:
+
+#+BEGIN_SRC emacs-lisp
+  (setq org-refile-allow-creating-parent-nodes (quote confirm))
+#+END_SRC
+
 * Audio
 ** On Enable volume control
 #+BEGIN_SRC emacs-lisp
@@ -122,6 +132,18 @@
 #+END_SRC
 
 * Coding
+** On Dumb jump
+:LOGBOOK:
+- State "On"         from              [2019-05-10 Fri 05:10]
+:END:
+
+#+BEGIN_SRC emacs-lisp
+  (use-package dumb-jump
+    :ensure t)
+  (setq dumb-jump-selector 'ivy)
+  (dumb-jump-mode)
+#+END_SRC
+
 ** Off Jump sub-words
 #+BEGIN_SRC emacs-lisp
   ;;(global-subword-mode 1)
@@ -214,6 +236,7 @@
 :LOGBOOK:
 - State "On"         from              [2019-05-01 Wed 18:36]
 :END:
+
 #+BEGIN_SRC emacs-lisp
   (defun open-initel()
     (interactive)
@@ -276,8 +299,14 @@
     :ensure t
     :config
     (dashboard-setup-startup-hook)
-    (setq dashboard-items '((recents . 16)))
-    (setq dashboard-banner-logo-title "You have gained access to this system. Remember with great power comes great responsibility."))
+    (setq dashboard-items '((recents . 16)
+                            (bookmarks . 5)
+                            (agenda . 5)
+                            (projects . 5)
+                            (registers . 5)))
+    (setq dashboard-banner-logo-title "You have gained access to this system. Remember with great power comes great responsibility.")
+    ;;(setq dashboard-center-content t)
+    )
 #+END_SRC
 
 * FileSystem
@@ -364,6 +393,28 @@
     (other-window 1))
   (global-set-key (kbd "C-x 3") 'split-and-follow-vertically)
 #+END_SRC* IDO
+* Git
+** On Magit
+:LOGBOOK:
+- State "On"         from              [2019-05-10 Fri 04:58]
+:END:
+
+#+BEGIN_SRC emacs-lisp
+  (use-package magit
+    :ensure t)
+#+END_SRC
+
+** On Git gutter
+:LOGBOOK:
+- State "On"         from              [2019-05-10 Fri 05:00]
+:END:
+
+#+BEGIN_SRC emacs-lisp
+  (use-package git-gutter
+    :ensure t)
+  (global-git-gutter-mode +1)
+#+END_SRC
+
 * Minibuffer
 ** On Hide load time
 #+BEGIN_SRC emacs-lisp
@@ -426,6 +477,15 @@ A friendlier visual bell effect.
   (org-alert-enable)
   (setq alert-default-style 'libnotify)
 #+END_SRC
+** On Require 2 lines for new line
+:LOGBOOK:
+- State "On"         from              [2019-05-09 Thu 17:27]
+:END:
+
+#+BEGIN_SRC emacs-lisp
+  (setq org-cycle-separator-lines 2)
+#+END_SRC
+
 ** Hotkeys
 *** On Store link
     - State "On"         from              [2019-04-30 Tue 07:17]
@@ -509,7 +569,18 @@ A friendlier visual bell effect.
 - State "On"         from              [2019-05-01 Wed 12:05]
 :END:
 #+BEGIN_SRC emacs-lisp
-  (org-agenda-files (quote ("~/org/todo.org")))
+  (setq my-agenda-files '("~/org/todo.org"
+                          "~/org/archive.org"
+                          "~/org/main.org"
+                          "~/org/notes.org"
+                          "~/org/lists.org"
+                          "~/org/emacs-keys.org"))
+
+  (mapc
+   (lambda (file)
+     (if (not (member file org-agenda-files))
+         (add-to-list 'org-agenda-files file)))
+   my-agenda-files)
 #+END_SRC
 
 ** On Enable log into logbook drawer
@@ -629,7 +700,10 @@ A friendlier visual bell effect.
 
 #+BEGIN_SRC emacs-lisp
   (setq org-todo-keywords
-        '((sequence "TODO(t!/!)" "IMPORTANT(i!/!)" "ACTIVE(a!/!)" "|" "DONE(d!/!)")))
+        '((sequence "TODO(t!/!)" "ACTIVE(a!/!)" "|" "DONE(d!/!)")
+          (sequence "IMPORTANT(i!/!)" "|")
+          (sequence "PUNY(p!/!)" "|")
+          (sequence "ON(o!/!)" "|" "OFF(f!/!)")))
 #+END_SRC
 
 ** On Keyword colors
@@ -641,14 +715,56 @@ A friendlier visual bell effect.
 
 #+BEGIN_SRC emacs-lisp
   (setq org-todo-keyword-faces
-    '(("TODO" . "red")
+    '(("TODO" . "OrangeRed1")
      ("DONE" . "green")
      ("IMPORTANT" . "red")
      ("ACTIVE" .  "deep sky blue")
+     ("PUNY". "orange")
+     ("ON" . "green")
+     ("OFF" . "red")
      ("On" . "green")
      ("Off" . "red")))
 #+END_SRC
 
+** On Enable dependency checking
+:LOGBOOK:
+- State "On"         from              [2019-05-09 Thu 17:29]
+:END:
 
+#+BEGIN_SRC emacs-lisp
+  (setq org-enforce-todo-checkbox-dependencies t)
+  (setq org-enforce-todo-dependencies t)
+#+END_SRC
 
+** On State logging
+:LOGBOOK:
+- State "On"         from              [2019-05-09 Thu 17:30]
+:END:
 
+#+BEGIN_SRC emacs-lisp
+  (setq org-log-done (quote time))
+  (setq org-log-into-drawer t)
+  (setq org-log-redeadline (quote time))
+  (setq org-log-refile (quote time))
+  (setq org-log-reschedule (quote time))
+#+END_SRC
+
+* Windows
+** Split focus right
+#+BEGIN_SRC emacs-lisp
+  (defun my-split-right ()
+    (interactive)
+    (split-window-right)
+    (other-window 1))
+
+  (global-set-key (kbd "C-x 3") 'my-split-right)
+#+END_SRC
+** Split focus below
+#+BEGIN_SRC emacs-lisp
+  (defun my-split-below ()
+    (interactive)
+    (split-window-below)
+    (other-window 1))
+
+  (global-set-key (kbd "C-x 2") 'my-split-below)
+#+END_SRC
