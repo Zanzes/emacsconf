@@ -37,6 +37,8 @@
 
 ;  (exwm-enable)
 
+(setq org-refile-allow-creating-parent-nodes (quote confirm))
+
 (use-package volume
   :ensure t)
 
@@ -59,6 +61,11 @@
   (interactive)
   (kill-buffer (current-buffer)))
 (global-set-key (kbd "C-x k") 'kill-current-buffer)
+
+(use-package dumb-jump
+  :ensure t)
+(setq dumb-jump-selector 'ivy)
+(dumb-jump-mode)
 
 ;;(global-subword-mode 1)
 
@@ -142,8 +149,14 @@
   :ensure t
   :config
   (dashboard-setup-startup-hook)
-  (setq dashboard-items '((recents . 16)))
-  (setq dashboard-banner-logo-title "You have gained access to this system. Remember with great power comes great responsibility."))
+  (setq dashboard-items '((recents . 16)
+                          (bookmarks . 5)
+                          (agenda . 5)
+                          (projects . 5)
+                          (registers . 5)))
+  (setq dashboard-banner-logo-title "You have gained access to this system. Remember with great power comes great responsibility.")
+  ;;(setq dashboard-center-content t)
+  )
 
 (setq create-lockfiles nil)
 (setq backup-directory-alist `((".*" . ,temporary-file-directory)))
@@ -196,6 +209,13 @@
   (other-window 1))
 (global-set-key (kbd "C-x 2") 'split-and-follow-horizontally)
 
+(use-package magit
+  :ensure t)
+
+(use-package git-gutter
+  :ensure t)
+(global-git-gutter-mode +1)
+
 (setq display-time-default-load-average nil)
 
 (setq display-time-24hr-format t)
@@ -227,6 +247,8 @@
   :ensure t)
 (org-alert-enable)
 (setq alert-default-style 'libnotify)
+
+(setq org-cycle-separator-lines 2)
 
 (global-set-key (kbd "C-c l") 'org-store-link)
 
@@ -263,7 +285,18 @@
 
 (global-set-key (kbd "C-c a") 'org-agenda-show-agenda-and-todo)
 
-(org-agenda-files (quote ("~/org/todo.org")))
+(setq my-agenda-files '("~/org/todo.org"
+                        "~/org/archive.org"
+                        "~/org/main.org"
+                        "~/org/notes.org"
+                        "~/org/lists.org"
+                        "~/org/emacs-keys.org"))
+
+(mapc
+ (lambda (file)
+   (if (not (member file org-agenda-files))
+       (add-to-list 'org-agenda-files file)))
+ my-agenda-files)
 
 (setq org-log-into-drawer t)
 
@@ -329,12 +362,41 @@
   :bind ("C-q" . er/expand-region))
 
 (setq org-todo-keywords
-      '((sequence "TODO(t!/!)" "IMPORTANT(i!/!)" "ACTIVE(a!/!)" "|" "DONE(d!/!)")))
+      '((sequence "TODO(t!/!)" "ACTIVE(a!/!)" "|" "DONE(d!/!)")
+        (sequence "IMPORTANT(i!/!)" "|")
+        (sequence "PUNY(p!/!)" "|")
+        (sequence "ON(o!/!)" "|" "OFF(f!/!)")))
 
 (setq org-todo-keyword-faces
-  '(("TODO" . "red")
+  '(("TODO" . "OrangeRed1")
    ("DONE" . "green")
    ("IMPORTANT" . "red")
    ("ACTIVE" .  "deep sky blue")
+   ("PUNY". "orange")
+   ("ON" . "green")
+   ("OFF" . "red")
    ("On" . "green")
    ("Off" . "red")))
+
+(setq org-enforce-todo-checkbox-dependencies t)
+(setq org-enforce-todo-dependencies t)
+
+(setq org-log-done (quote time))
+(setq org-log-into-drawer t)
+(setq org-log-redeadline (quote time))
+(setq org-log-refile (quote time))
+(setq org-log-reschedule (quote time))
+
+(defun my-split-right ()
+  (interactive)
+  (split-window-right)
+  (other-window 1))
+
+(global-set-key (kbd "C-x 3") 'my-split-right)
+
+(defun my-split-below ()
+  (interactive)
+  (split-window-below)
+  (other-window 1))
+
+(global-set-key (kbd "C-x 2") 'my-split-below)

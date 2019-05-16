@@ -26,6 +26,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (manoj-dark)))
+ '(gnus-undo-limit 20000)
  '(org-agenda-files
    (quote
     ("~/org/todo.org" "~/org/main.org" "~/org/notes.org")))
@@ -50,6 +51,7 @@
  '(org-pretty-entities t)
  '(org-refile-allow-creating-parent-nodes (quote confirm))
  '(org-refile-targets (quote ((org-agenda-files :level . 1))))
+ '(org-self-insert-cluster-for-undo t)
  '(org-src-tab-acts-natively t)
  '(org-src-window-setup (quote current-window))
  '(org-track-ordered-property-with-tag t)
