@@ -131,6 +131,21 @@
   (global-set-key (kbd "C-x k") 'kill-current-buffer)
 #+END_SRC
 
+** On Projectile
+:LOGBOOK:
+- State "On"         from              [2019-05-16 Thu 20:17]
+:END:
+
+#+BEGIN_SRC emacs-lisp
+  (use-package projectile
+    :ensure t
+    :config
+    (projectile-global-mode)
+    (setq projectile-completion-system 'ivy))(projectile-mode +1)
+  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+#+END_SRC
+
 * Coding
 ** On Dumb jump
 :LOGBOOK:
@@ -198,16 +213,18 @@
     :ensure t
     :init (add-hook 'prog-mode-hook 'rainbow-mode))
 #+END_SRC
-
-
 ** On Emacs Lisp src snippet
 #+BEGIN_SRC emacs-lisp
   (add-to-list 'org-structure-template-alist
 	       '("el" "#+BEGIN_SRC emacs-lisp\n?\n#+END_SRC"))
 #+END_SRC
 
-** On Auto compleation
-*** Company
+** Auto compleation
+*** On Company
+:LOGBOOK:
+- State "On"         from              [2019-05-16 Thu 19:45]
+:END:
+
 #+BEGIN_SRC emacs-lisp
   (use-package company
     :ensure t
@@ -217,12 +234,50 @@
     :init
     (add-hook 'after-init-hook 'global-company-mode))
 #+END_SRC
+
+*** On Flycheck
+:LOGBOOK:
+- State "On"         from              [2019-05-16 Thu 19:46]
+:END:
+
+#+BEGIN_SRC emacs-lisp
+  (use-package flycheck
+    :ensure t
+    :init (global-flycheck-mode t))
+#+END_SRC
+
+*** On Jedi
+:LOGBOOK:
+- State "On"         from              [2019-05-16 Thu 19:45]
+:END:
+
+#+BEGIN_SRC emacs-lisp
+  (use-package jedi
+    :ensure t
+    :init
+    (add-hook 'python-mode-hook 'jedi:setup)
+    (add-hook 'python-mode-hook 'jedi:ac-setup))
+#+END_SRC
+
 ** On up-kill-ring
 #+BEGIN_SRC emacs-lisp
   (use-package popup-kill-ring
     :ensure t
     :bind ("M-y" . popup-kill-ring))
 #+END_SRC
+* Help
+** On Witch-key
+:LOGBOOK:
+- State "On"         from              [2019-05-16 Thu 20:14]
+:END:
+
+#+BEGIN_SRC emacs-lisp
+  (use-package which-key
+    :ensure t
+    :init
+    (which-key-mode))
+#+END_SRC
+
 * Config file
 ** On Open lzconf.org
 #+BEGIN_SRC emacs-lisp
